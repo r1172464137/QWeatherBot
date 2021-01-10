@@ -25,11 +25,11 @@ def get_now_weather_info(result):
         return content, result_dict
 
 def main():
-    QW_KEY = os.getenv('KEY')
+    QW_KEY = os.getenv('QW_KEY')
     LOCATION = os.getenv('LOCATION')
     COOL_PUSH = os.getenv('COOL_PUSH')
 
-    weather = QWeather(KEY)
+    weather = QWeather(QW_KEY)
 
     now_info, result_dict = get_now_weather_info(weather.get_now_weather(LOCATION))
 
