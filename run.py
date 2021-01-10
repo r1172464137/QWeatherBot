@@ -14,11 +14,11 @@ def get_now_weather_info(result):
             if key in keys:
                 result_dict.update({key: item})
 
-        obs_time = '更新时间:' + result['obsTime']
-        temp = '当前温度:' + result['temp'] + ' ℃'
-        feels_like = '体感温度:' + result['feelsLike'] + ' ℃'
-        text = '天气状况:' + result['text']
-        cloud = '云量:' + result['cloud'] + '%'
+        obs_time = '更新时间: ' + result['obsTime']
+        temp = '当前温度: ' + result['temp'] + ' ℃'
+        feels_like = '体感温度: ' + result['feelsLike'] + ' ℃'
+        text = '天气状况: ' + result['text']
+        cloud = '云量: ' + result['cloud'] + '%'
 
         content = '\n'.join([obs_time, temp, feels_like, text, cloud])
 
@@ -39,7 +39,7 @@ def main():
 
     tomorrow_info = '明日温度: {} ~ {} ℃\n'.format(tomorrow['tempMin'], tomorrow['tempMax'])
     tomorrow_info += '早晚天气: {}, {}\n'.format(tomorrow['textDay'], tomorrow['textNight'])
-    tomorrow_info += '日落时间:{}\n'.format(tomorrow['sunset'])
+    tomorrow_info += '日落时间: {}\n'.format(tomorrow['sunset'])
 
     content += tomorrow_info
 
