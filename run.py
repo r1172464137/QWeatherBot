@@ -40,11 +40,11 @@ def main():
     tomorrow_info = ''
     today_info = ''
 
-    content = now_info + '\n\n\n'
+    content = now_info + '\n\n'
 
     today_info = '今日温度: {} ~ {} ℃\n'.format(today['tempMin'], today['tempMax'])
     today_info += '早晚天气: {}, {}\n'.format(today['textDay'], today['textNight'])
-    today_info += '日落时间: {}\n'.format(today['sunset'])
+    today_info += '日落时间: {}\n\n'.format(today['sunset'])
 
     tomorrow_info = '明日温度: {} ~ {} ℃\n'.format(tomorrow['tempMin'], tomorrow['tempMax'])
     tomorrow_info += '早晚天气: {}, {}\n'.format(tomorrow['textDay'], tomorrow['textNight'])
