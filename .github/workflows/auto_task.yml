@@ -5,7 +5,8 @@ name: SendMsgToQQ
 
 on:
   schedule:
-    - cron: "0 11-23 * * *"
+    # 6 - 9
+    - cron: "0 1-22 * * *"
   
   workflow_dispatch:
 
