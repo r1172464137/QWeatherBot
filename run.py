@@ -34,17 +34,26 @@ def main():
     now_info, result_dict = get_now_weather_info(weather.get_now_weather(LOCATION))
 
     daily = weather.get_3d_weather(LOCATION)['daily']
-    tomorrow_info = daily[1]
+    tomorrow = daily[1]
+    today = daily[0]
+
+    tomorrow_info = ''
+    today_info = ''
 
     content = now_info + '\n\n\n'
+
+    today_info = '今日温度: {} ~ {} ℃\n'.format(today['tempMin'], today['tempMax'])
+    today_info += '早晚天气: {}, {}\n'.format(today['textDay'], today['textNight'])
+    today_info += '日落时间: {}\n'.format(today['sunset'])
 
     tomorrow_info = '明日温度: {} ~ {} ℃\n'.format(tomorrow['tempMin'], tomorrow['tempMax'])
     tomorrow_info += '早晚天气: {}, {}\n'.format(tomorrow['textDay'], tomorrow['textNight'])
     tomorrow_info += '日落时间: {}'.format(tomorrow['sunset'])
 
+    content += today_info
     content += tomorrow_info
 
-    cool_push.send_msg_to_qq_group(COOL_PUSH, LOCATION + '天气\n' + content)
+    cool_push.send_msg_to_qq_group(COOL_PUSH, LOCATION + '实时天气\n' + content)
 
 
 if __name__ == '__main__':
