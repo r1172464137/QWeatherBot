@@ -52,7 +52,7 @@ def main():
     content += today_info
     content += tomorrow_info
 
-    cool_push.send_msg_to_qq_group(COOL_PUSH, LOCATION + '实时天气\n' + content)
+    cool_push.send_msg_to_qq_group(LOCATION + '实时天气\n' + content)
 
 
 if __name__ == '__main__':
