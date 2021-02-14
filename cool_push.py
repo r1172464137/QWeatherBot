@@ -1,19 +1,15 @@
 import requests
 
-def send_msg_to_qq_group(KEY, content):
-    group_api = 'https://push.xuthus.cc/group/{}'.format(KEY)
+def send_msg_to_qq_group(content):
+    group_api = 'https://push.godever.xyz/'
 
-    params = {
-        'c': content
+    url= 'https://www.qweather.com/'
+    params={
+        'title':title,
+        'description':content,
+        'url':url
     }
 
     return requests.get(group_api, params=params).json()
+    print(response)
 
-def send_msg_to_qq_user(KEY, content):
-    group_api = 'https://push.xuthus.cc/send/{}'.format(KEY)
-
-    params = {
-        'c': content
-    }
-
-    return requests.get(group_api, params=params).json()
