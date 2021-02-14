@@ -1,6 +1,5 @@
 import os
 
-import cool_push
 from QWeather import QWeather
 
 
@@ -27,7 +26,6 @@ def get_now_weather_info(result):
 def main():
     QW_KEY = os.getenv('QW_KEY')
     LOCATION = os.getenv('LOCATION')
-    COOL_PUSH = os.getenv('COOL_PUSH')
 
     weather = QWeather(QW_KEY)
 
