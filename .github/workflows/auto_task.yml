@@ -30,7 +30,6 @@ jobs:
       env:
         QW_KEY: ${{secrets.QW_KEY}}
         LOCATION: ${{secrets.LOCATION}}
-        COOL_PUSH: ${{secrets.COOL_PUSH}}
     
         
       run: 
